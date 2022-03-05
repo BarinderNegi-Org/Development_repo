@@ -1,0 +1,76 @@
+class A{
+	A(){System.out.print("A");}
+}
+class B extends A{
+	B(){System.out.print("B");}
+}
+class C extends B{
+	C(){System.out.print("C");}
+	
+public static void main(String Agr[])
+{
+	C obj = new C();
+    	obj.Show();
+}
+	void Show(){
+    		System.out.print("OutPut");
+	}
+}
+
+a) OutPutCBA	B) OutPutC
+c) COutPut	D) ABCOutPut
+
+
+
+class A{
+	
+	void show(){
+		System.out.println("A-show");}
+	void show2(){
+		System.out.println("A-show2");}
+}
+class B extends A{
+	
+	void show(){
+		System.out.println("B-show");}
+	void run(){
+		System.out.println("B-run");}
+		
+	public static void main(String agr[]){
+		A obj = new B();
+		obj.show();
+		obj.show2();
+		obj.run();
+		}
+}
+
+a) A-show	b) B-show
+   A-show2	   A-show2
+   B-run	   B-run
+
+c) Compiletime Error(obj.run();)  d) Runtime Error(obj.run();)
+
+
+class A{
+	
+	void show(){
+		System.out.println("A-show");}
+	void show2(){
+		System.out.println("A-show2");}
+}
+class B extends A{
+	
+	void show(){
+		System.out.println("B-show");}
+		
+	public static void main(String agr[]){
+		A obj = new B();
+		obj.show();
+		obj.show2();
+		}
+}
+
+a) B-show	b) A-show
+   A-show2	   A-show2
+
+c) Compiletime Error(A obj = new B();)  d) Runtime Error(A obj = new B();)
